@@ -22,7 +22,7 @@ const products = db.define('products', {
     name: DataTypes.STRING,
     price:DataTypes.INTEGER,
 });
-db.sync({force: true})
+db.sync({alter: true})
     .then(() => console.info("Database configured"))
     .catch((err) => console.error(err));
 
