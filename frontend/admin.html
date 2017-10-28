@@ -5,6 +5,7 @@
     <title>admin</title>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
+   <script src="jquery-form.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
@@ -21,17 +22,26 @@
             <br>
         </div>
     </div>
+    <form enctype="multipart/form-data" action= "http://localhost:5656/admin" method="post" id="frmUploader">
     <div class="row justify-content-center">
-        <div class="col-3">
-        <input id="name" class="form-control" placeholder="name">
-        </div>
-        <div class="col-3">
-        <input id="price" class="form-control" placeholder="price" type="number">
-        </div>
-        <div class="col-1">
-        <button class="btn btn-primary" id="add"><i class="fa fa-plus"></i> </button>
+        <div class="col-4">
+
+            Select Image of product:
+            <input class="btn btn-outline-secondary" id="img" type="file" name="imgUploader">
         </div>
     </div>
+    <div class="row justify-content-center mt-3">
+        <div class="col-3">
+        <input id="name" class="form-control" placeholder="name" name="name">
+        </div>
+        <div class="col-3">
+        <input id="price" class="form-control" placeholder="price" name="price" type="number">
+        </div>
+        <div class="col-1">
+        <input class="btn btn-primary" id="add" type="submit" value="add item">
+        </div>
+    </div>
+    </form>
     <div class="row justify-content-center mt-3" id="products-list">
         <div class="card col-3" style="width: 20rem;">
             <div class="card-body">

@@ -12,7 +12,7 @@ route.post('/:id', (req, res) => {
             message: "Product not found"
         })
     }
-    products.findOne({where:{id:req.params.id}})
+    products.findAll({where:{id:req.params.id}})
         .then((product) => res.send(product))
         .catch(err => console.error(err))
 });

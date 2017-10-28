@@ -13,6 +13,7 @@ const db = new Sequelize(
 );
 
 const products = db.define('products', {
+    img:DataTypes.STRING,
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -21,7 +22,7 @@ const products = db.define('products', {
     name: DataTypes.STRING,
     price:DataTypes.INTEGER,
 });
-db.sync({alter: true})
+db.sync({force: true})
     .then(() => console.info("Database configured"))
     .catch((err) => console.error(err));
 

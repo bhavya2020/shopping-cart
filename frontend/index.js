@@ -9,5 +9,3 @@ $( ()=> {
         window.location = '/admin.html'
     })
 });
-
-// window.onload
