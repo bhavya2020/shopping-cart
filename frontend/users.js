@@ -25,18 +25,21 @@ $(()=>{
         let flag=false;
         let pid=$(el).attr('data-pid');
         $.post(`/users/${pid}`,(p) => {
-            p.push({id:0,name:'abc',price:12,quantity:1});
+            p.push({img:"img",id:0,name:'abc',price:12,quantity:1});
           let pp=localStorage.getItem(`product`);
           let ps=JSON.parse(pp);
           console.log(ps);
           if(ps===null)
           {
               let product=[{
+                  img:p[0].img,
                   id:p[0].id,
                   name:p[0].name,
                   price:p[0].price,
                   quantity:1
-              },{id:p[1].id,
+              },{
+                  img:p[1].img,
+                  id:p[1].id,
                   name:p[1].name,
                   price:p[1].price,
                   quantity:1}];
@@ -62,6 +65,7 @@ $(()=>{
               if (!flag) {
 
                   let product = {
+                      img:p[0].img,
                       id: p[0].id,
                       name: p[0].name,
                       price: p[0].price,

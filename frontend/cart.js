@@ -9,6 +9,7 @@ $(()=>{
                 let newProduct = $(`
              <div class="card col-3 m-2" style="width: 20rem;">
             <div class="card-body">
+             <img class="card-img-top" src="./Images/${product.img}" >
                 <h4 class="card-title">${product.name}</h4>
                 <p class="card-text">Price:${product.price}</p>
                 <p class="card-text">Quantity:${product.quantity}</p>
