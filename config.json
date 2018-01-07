@@ -1,9 +1,0 @@
-{
-  "DB": {
-    "USER": "todouser",
-    "DATABASE": "todoapp",
-    "PASSWORD": "Todo123!",
-    "HOST": "localhost",
-    "DIALECT": "mysql"
-  }
-}

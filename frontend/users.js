@@ -4,14 +4,14 @@ function refresh(products)
     productList.empty();
     for (let product of products) {
         let newProduct = $(`
-             <div class="card col-3 m-2" style="width: 20rem;">
-             <img class="card-img-top" src="./Images/${product.img}" >
-            <div class="card-body">
-                <h4 class="card-title">${product.name}</h4>
-                <p class="card-text">Price:${product.price}</p>
-                <i data-pid="${product.id}" class="fa fa-plus" onclick="add(this)" style="color: blue; float: right;font-size: 4vh"></i>
-            </div>
-        </div>`
+            <div class="card col-3 m-2" style="width: 20rem;">
+                <img class="card-img-top" src="./Images/${product.img}" >
+                <div class="card-body">
+                    <h4 class="card-title">${product.name}</h4>
+                    <p class="card-text">Price:${product.price}</p>
+                    <i data-pid="${product.id}" class="fa fa-plus" onclick="add(this)" style="color: blue; float: right;font-size: 4vh"></i>
+                </div>
+            </div>`
         );
         productList.prepend(newProduct);
     }
